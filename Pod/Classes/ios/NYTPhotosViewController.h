@@ -12,6 +12,7 @@
 
 @protocol NYTPhoto;
 @protocol NYTPhotosViewControllerDelegate;
+@protocol NYTPhotosViewControllerDataSource;
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -105,6 +106,12 @@ extern NSString * const NYTPhotosViewControllerDidDismissNotification;
  *  @param photo The photo for which to display the new image.
  */
 - (void)updateImageForPhoto:(id <NYTPhoto> _Nullable)photo;
+
+
+/**
+ *  The object that acts as the data source of the `NYTPhotosViewController`.
+ */
+@property (nonatomic) id <NYTPhotosViewControllerDataSource> dataSource;
 
 @end
 
