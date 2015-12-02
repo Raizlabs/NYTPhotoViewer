@@ -12,6 +12,7 @@
 
 @protocol NYTPhoto;
 @protocol NYTPhotosViewControllerDelegate;
+@protocol NYTPhotosViewControllerDataSource;
 
 // All notifications will have the `NYTPhotosViewController` instance set as the object.
 extern NSString * const NYTPhotosViewControllerDidDisplayPhotoNotification;
@@ -93,6 +94,12 @@ extern NSString * const NYTPhotosViewControllerDidDismissNotification;
  *  @param photo The photo for which to display the new image.
  */
 - (void)updateImageForPhoto:(id <NYTPhoto>)photo;
+
+
+/**
+ *  The object that acts as the data source of the `NYTPhotosViewController`.
+ */
+@property (nonatomic) id <NYTPhotosViewControllerDataSource> dataSource;
 
 @end
 
