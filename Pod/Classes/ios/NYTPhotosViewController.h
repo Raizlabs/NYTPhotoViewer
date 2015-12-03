@@ -95,6 +95,7 @@ extern NSString * const NYTPhotosViewControllerDidDismissNotification;
  */
 - (void)updateImageForPhoto:(id <NYTPhoto>)photo;
 
+- (void)setupPageViewControllerWithInitialPhoto:(id <NYTPhoto>)initialPhoto;
 
 /**
  *  The object that acts as the data source of the `NYTPhotosViewController`.
